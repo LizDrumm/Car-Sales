@@ -1,5 +1,10 @@
 import React from 'react';
 
+
+import {connect} from 'react-redux'
+import {removeFeatures} from '../actions'
+
+
 const AddedFeature = props => {
   return (
     <li>
@@ -12,4 +17,6 @@ const AddedFeature = props => {
   );
 };
 
-export default AddedFeature;
+export default  connect(null , {removeFeatures})(AddedFeature);
+
+

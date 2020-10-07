@@ -37,7 +37,8 @@ case REMOVE_FEATURES:
 let removeTotal = state.car.price;
 return {
 ...state,
-car: {...state.car, 
+car: {
+    ...state.car, 
   price: (removeTotal -= action.payload.price),
   features: [...state.car.features.filter(item =>
     item.id !== action.payload.id)]
